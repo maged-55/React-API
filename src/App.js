@@ -3,54 +3,30 @@ import React,{useEffect,useState} from 'react';
 import axios from "axios";
 import Create from './component/Create'
 import Get from './component/Get'
+import LogIn from './component/LogIn'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Route1 from './component/Route1'
+
 
 function App() {
 
 
-  // const [state, setstate] = useState([])
 
-  // useEffect(() => {
-  //   axios.get("https://rickandmortyapi.com/api/character").then((res) =>{
-  //     console.log(res.data.results);
-  //     setstate(res.data.results);
-  //   })
-
-
-  // }, [])
+  
   
   return (
+
     <div className="App">
-      <Create/>
-      <Get/>
+          <Route1/>
 
-
-
-
-
-
-
-
-
-
-
-      {/* {state.map(item=>{
-        return (
-        <>
-        <div className = "de">
-          
-        
-<p>{item.name}</p><br/>
-<img src ={item.image}/>
-</div>
-
-
-
-
-        </>
-
-
-        )
-      })} */}
+        {/* <Get/> */}
+      {/* <Create/> */}
+    
     </div>
   );
 }
